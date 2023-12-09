@@ -19,7 +19,7 @@ Follow link [                   ] to view a tutorial video on how to access and 
     
 # Resources
 
-<li></li>
+<li>https://www.npmjs.com/package/mysql2</li>
 
 <li></li>
 
