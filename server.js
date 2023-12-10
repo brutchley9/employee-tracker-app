@@ -26,6 +26,23 @@ const db = mysql.createConnection(
 
 //vvvvv anything below this line utilizes functions to update database
 
+function displayDepartments() {
+    const departmentTable = "SELECT * FROM department;";
+    db.query(departmentTable, (err, res) => {
+        console.log(res);
+    });
+};
+
+
+
+
+
+
+
+
+
+//vvvv anything below this line is where functions utilizing MySQL are passed into Inquirer
+
 inquirer
     .prompt( [
         {
@@ -45,9 +62,20 @@ inquirer
     ])
     .then((answer) => {
         //console.log("Selected '" + answer.companyinfo + "'!");
-        switch(answer) {
-            case "View all departments":
-                console.log("Does it work?")
+        switch(answer.companyinfo) {
+            case ("View all departments"):
+                console.log("Can do. Here is a list of departments:")
+                displayDepartments()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("View all roles"):
+                console.log("Does THIS work?")
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("View all employees"):
+                console.log("Does THIS work?")
                 break;
         }
 });
@@ -64,7 +92,7 @@ inquirer
 
 
 //404 response for page not loading correctly / invalid URL
-/*app.use((req, res) => {
+app.use((req, res) => {
     res.status(404).end();
 });
 
@@ -72,7 +100,6 @@ inquirer
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 });
-*/
 
 
 
