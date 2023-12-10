@@ -33,7 +33,19 @@ function displayDepartments() {
     });
 };
 
+function displayTasks() {
+    const taskTable = "SELECT * FROM task;";
+    db.query(taskTable, (err, res) => {
+        console.log(res);
+    });
+}
 
+function displayEmployee() {
+    const employeeTable = "SELECT* FROM employee;";
+    db.query(employeeTable, (err, res) => {
+        console.log(res);
+    });
+}
 
 
 
@@ -70,12 +82,14 @@ inquirer
         }
         switch(answer.companyinfo) {
             case ("View all roles"):
-                console.log("Does THIS work?")
+                console.log("Can do. Here is a list of roles:")
+                displayTasks()
                 break;
         }
         switch(answer.companyinfo) {
             case ("View all employees"):
-                console.log("Does THIS work?")
+                console.log("Can do. Here is a list of employees:")
+                displayEmployee()
                 break;
         }
 });
