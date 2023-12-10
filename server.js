@@ -29,13 +29,22 @@ const db = mysql.createConnection(
 inquirer
     .prompt( [
         {
-            name: "blah",
-            type: "input",
-            message: "What is your name?",
+            name: "companyinfo",
+            type: "list",
+            message: "What would you like to do?",
+            choices: [
+                "View all departments",
+                "View all roles",
+                "View all employees",
+                "Add a department",
+                "Add a role",
+                "Add an employee",
+                "Update an employee role"
+            ]
         },
     ])
     .then((answer) => {
-        console.log("Hello " + answer.blah + "!");
+        console.log("Selected '" + answer.companyinfo + "'!");
 });
 
 
