@@ -22,10 +22,8 @@ CREATE TABLE employee (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    task_id INT UNSIGNED NOT NULL,
-    INDEX task_ind (task_id),
-    CONSTRAINT fk_task FOREIGN KEY (task_id) REFERENCES task(id) ON DELETE CASCADE,
-    manager_id INT UNSIGNED,
-    INDEX man_ind (manager_id),
-    CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
+    task_id INT,
+    FOREIGN KEY (task_id)
+    REFERENCES task(id)
+    ON DELETE SET NULL
 );
