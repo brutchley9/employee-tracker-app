@@ -44,7 +44,12 @@ inquirer
         },
     ])
     .then((answer) => {
-        console.log("Selected '" + answer.companyinfo + "'!");
+        //console.log("Selected '" + answer.companyinfo + "'!");
+        switch(answer) {
+            case "View all departments":
+                console.log("Does it work?")
+                break;
+        }
 });
 
 

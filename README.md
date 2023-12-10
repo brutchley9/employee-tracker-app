@@ -26,3 +26,5 @@ Follow link [                   ] to view a tutorial video on how to access and 
 <li>https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html</li>
 
 <li>https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html</li>
+
+<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch</li>
