@@ -1,6 +1,7 @@
 //require express and mysql functionality
 const express = require("express");
 const mysql = require("mysql2");
+const inquirer = require("inquirer");
 
 //allow accessibility to localport and Heroku if necessary
 const PORT = process.env.PORT || 3001;
@@ -19,13 +20,23 @@ const db = mysql.createConnection(
         password: 'Thisismypassword86!',
         database: 'company_db'
     },
-    console.log(`Connection to company_db successful`)
+    console.log(`Welcome to the Employee Tracker App! One moment please...`)
 );
 
 
 //vvvvv anything below this line utilizes functions to update database
 
-
+inquirer
+    .prompt( [
+        {
+            name: "blah",
+            type: "input",
+            message: "What is your name?",
+        },
+    ])
+    .then((answer) => {
+        console.log("Hello " + answer.blah + "!");
+});
 
 
 
@@ -39,7 +50,7 @@ const db = mysql.createConnection(
 
 
 //404 response for page not loading correctly / invalid URL
-app.use((req, res) => {
+/*app.use((req, res) => {
     res.status(404).end();
 });
 
@@ -47,7 +58,7 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 });
-
+*/
 
 
 
