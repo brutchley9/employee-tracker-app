@@ -16,7 +16,8 @@ CREATE TABLE role (
     --creates primary key for 'role' to be referenced in 'employee'
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL NOT NULL,
+    --records salary with length of 9 total possible integers (including decimals), and goes to 2 decimal places
+    salary DECIMAL(9, 2),
     --creating foreign key connection to department primary key called "department_id"
     FOREIGN KEY (department_id)
     --this below is where it references the id from "department" itself

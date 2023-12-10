@@ -21,6 +21,8 @@ Follow link [                   ] to view a tutorial video on how to access and 
 
 <li>https://www.npmjs.com/package/mysql2</li>
 
-<li></li>
+<li>https://dev.mysql.com/doc/refman/8.0/en/constraint-primary-key.html</li>
 
-<li></li>
+<li>https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html</li>
+
+<li>https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html</li>
