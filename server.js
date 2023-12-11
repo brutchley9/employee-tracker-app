@@ -20,7 +20,8 @@ const db = mysql.createConnection(
         password: 'Thisismypassword86!',
         database: 'company_db'
     },
-    console.log(`Welcome to the Employee Tracker App! One moment please...`)
+    console.log(`Welcome to the Employee Tracker App! One moment please...`),
+    runInquirer()
 );
 
 
@@ -29,21 +30,24 @@ const db = mysql.createConnection(
 function displayDepartments() {
     const departmentTable = "SELECT * FROM department;";
     db.query(departmentTable, (err, res) => {
-        console.table(res);
+        console.table(res),
+        runInquirer();
     });
 };
 
 function displayTasks() {
     const taskTable = "SELECT * FROM task;";
     db.query(taskTable, (err, res) => {
-        console.table(res);
+        console.table(res),
+        runInquirer();
     });
 };
 
 function displayEmployee() {
     const employeeTable = "SELECT* FROM employee;";
     db.query(employeeTable, (err, res) => {
-        console.table(res);
+        console.table(res),
+        runInquirer();
     });
 };
 
@@ -55,7 +59,8 @@ function displayEmployee() {
 
 //vvvv anything below this line is where functions utilizing MySQL are passed into Inquirer
 
-inquirer
+function runInquirer() {
+    inquirer
     .prompt( [
         {
             name: "companyinfo",
@@ -92,7 +97,53 @@ inquirer
                 displayEmployee()
                 break;
         }
-});
+        return;
+})
+};
+
+
+
+
+
+/*inquirer
+    .prompt( [
+        {
+            name: "companyinfo",
+            type: "list",
+            message: "What would you like to do?",
+            choices: [
+                "View all departments",
+                "View all roles",
+                "View all employees",
+                "Add a department",
+                "Add a role",
+                "Add an employee",
+                "Update an employee role"
+            ]
+        },
+    ])
+    .then((answer) => {
+        //console.log("Selected '" + answer.companyinfo + "'!");
+        switch(answer.companyinfo) {
+            case ("View all departments"):
+                console.log("Can do. Here is a list of departments:")
+                displayDepartments()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("View all roles"):
+                console.log("Can do. Here is a list of roles:")
+                displayTasks()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("View all employees"):
+                console.log("Can do. Here is a list of employees:")
+                displayEmployee()
+                break;
+        }
+        return;
+});*/
 
 
 
