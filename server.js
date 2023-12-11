@@ -51,7 +51,25 @@ function displayEmployee() {
     });
 };
 
+function addDepartment() {
+    console.log("Sorry! Future development.")
+    runInquirer();
+};
 
+function addTask() {
+    console.log("Sorry! Future development.")
+    runInquirer();
+};
+
+function addEmployee() {
+    console.log("Sorry! Future development.")
+    runInquirer();
+};
+
+function updateEmployee() {
+    console.log("Sorry! Future development.")
+    runInquirer();
+};
 
 
 
@@ -97,12 +115,36 @@ function runInquirer() {
                 displayEmployee()
                 break;
         }
-        return;
+        switch(answer.companyinfo) {
+            case ("Add a department"):
+                //console.log("Can do. Here is a list of employees:")
+                addDepartment()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("Add a role"):
+                //console.log("Can do. Here is a list of employees:")
+                addTask()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("Add an employee"):
+                //console.log("Can do. Here is a list of employees:")
+                addEmployee()
+                break;
+        }
+        switch(answer.companyinfo) {
+            case ("Update an employee role"):
+                //console.log("Can do. Here is a list of employees:")
+                updateEmployee()
+                break;
+        }
+
 })
 };
 
 
-
+//vvvv nested below inquirer logic within a function to allow prompts to repeat
 
 
 /*inquirer
