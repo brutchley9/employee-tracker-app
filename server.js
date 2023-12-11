@@ -29,23 +29,23 @@ const db = mysql.createConnection(
 function displayDepartments() {
     const departmentTable = "SELECT * FROM department;";
     db.query(departmentTable, (err, res) => {
-        console.log(res);
+        console.table(res);
     });
 };
 
 function displayTasks() {
     const taskTable = "SELECT * FROM task;";
     db.query(taskTable, (err, res) => {
-        console.log(res);
+        console.table(res);
     });
-}
+};
 
 function displayEmployee() {
     const employeeTable = "SELECT* FROM employee;";
     db.query(employeeTable, (err, res) => {
-        console.log(res);
+        console.table(res);
     });
-}
+};
 
 
 

@@ -28,3 +28,7 @@ Follow link [                   ] to view a tutorial video on how to access and 
 <li>https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html</li>
 
 <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch</li>
+
+<li>https://www.w3schools.com/nodejs/nodejs_mysql.asp</li>
+
+<li>https://developer.mozilla.org/en-US/docs/Web/API/console/table_static</li>
