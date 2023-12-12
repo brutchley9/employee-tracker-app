@@ -11,7 +11,7 @@ A walkthrough video will also be provided for further demonstration once the app
 
 Follow link https://github.com/brutchley9/employee-tracker-app to access GitHub repository for this website (including code).
 
-Follow link [                   ] to view a tutorial video on how to access and initialize this application from the command line.
+Follow link https://drive.google.com/file/d/1jHMRtrQuY2g6pzxDog25eZ30YtD6B-YN/view to view a tutorial video on how to access and initialize this application from the command line.
 
 
 ---
